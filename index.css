@@ -1,0 +1,101 @@
+header {
+    text-align: center;
+    color: #333;
+}
+
+.add-task {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    padding: 16px;
+}
+
+.add-task input {
+    width: 280px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.add-task button {
+    width: 120px;
+    height: 40px;
+    margin-left: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+    background-color: #e0e0e0; /* 悬停效果 */
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 顶部对齐 */
+    align-items: center; /* 子元素靠左 */
+    width: 700px;
+    height: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 10px; /* 子元素之间的间距 */
+}
+
+.task-item {
+    width: 500px;
+    min-height: 34px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;  /* 不允许缩小 */
+    flex-grow: 0;    /* 不允许拉伸 */
+}
+
+/* 隐藏原生复选框 */
+.task-item input[type="checkbox"] {
+  display: none;
+}
+
+/* 自定义复选框圆形 */
+.task-item .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* 勾选后的样式 */
+.task-item input[type="checkbox"]:checked + .checkmark::after {
+  content: "";             /* 必须有 content 才能显示 */
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid white;     /* 勾的颜色 */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  background: transparent;
+}
+
+/* 打勾是背景填充圆形 */
+.task-item input[type="checkbox"]:checked + .checkmark {
+  background-color: #4CAF50; /* 选中背景色 */
+  border-color: #4CAF50;
+}

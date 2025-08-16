@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GoToDo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
+    <hr />
+
+    <div>
+      <!-- 添加task容器 -->
+      <div class="add-task">
+        <input type="text" id="taskInput" placeholder="Add task" />
+        <button id="addTaskButton">Add</button>
+      </div>
+
+      <!-- 列表容器 -->
+      <div class="task-list">
+        <div class="task-item">
+          <input type="checkbox" id="task1" /> <!-- 复选框 -->
+          <label class="checkmark" for="task1"></label> <!-- 自定义复选框样式 -->
+          <span class="task-text">Lorem, ipsum.</span>
+        </div>
+
+        <div class="task-item">
+          <input type="checkbox" id="task2" />
+          <label class="checkmark" for="task2"></label>
+          <span class="task-text">Lorem, ipsum.</span>
+        </div>
+
+        <div class="task-item">
+          <input type="checkbox" id="task3" />
+          <label class="checkmark" for="task3"></label>
+          <span class="task-text">Lorem, ipsum.</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
